@@ -1,0 +1,42 @@
+.add__task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 20px;
+  background-color: #edeef0;
+  border-radius: 30px;
+  padding-left: 1rem;
+}
+
+.task__application--title {
+  padding-bottom: 3rem;
+  font-size: 1.5rem;
+}
+
+.add__task input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding: 15px 0;
+}
+
+.add__task input[type="text"] {
+  width: 54%;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 3px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background-color: #04aa6d;
+  height: 55px;
+  width: 55px;
+  color: #fff;
+  font-size: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}

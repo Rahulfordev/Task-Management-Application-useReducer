@@ -5,7 +5,7 @@ import TaskList from "./components/TaskList/TaskList";
 function App() {
   return (
     <>
-      <div>
+      <div className="task-application">
         <GlobalProvider>
           <div>
             <AddTaskForm />

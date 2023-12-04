@@ -1,5 +1,9 @@
 import { useContext, useState } from "react";
 import { GlobalContext } from "../../Context/Globalstate";
+
+// import { IoAddOutline } from "react-icons/io5";
+
+import "./AddTask.css";
 const AddTaskForm = () => {
   const [task, setTask] = useState("");
 
@@ -13,21 +17,25 @@ const AddTaskForm = () => {
       task,
     };
     addTask(taskItem);
+    setTask("");
   };
   return (
-    <div>
-      <h1>Task Management Application</h1>
-      <div>
+    <div className="task-section">
+      <h1 className="task__application--title">Task Management Application</h1>
+      <div className="task__add">
         <form action="" onSubmit={handleSubmit}>
-          <div>
-            <input
-              type="text"
-              value={task}
-              onChange={(e) => setTask(e.target.value)}
-              placeholder="Enter your task..."
-            />
+          <div className="add__task--container">
+            <div className="add__task">
+              <input
+                type="text"
+                value={task}
+                onChange={(e) => setTask(e.target.value)}
+                placeholder="Enter your task..."
+              />
+
+              <button className="btn">+{/* <IoAddOutline /> */}</button>
+            </div>
           </div>
-          <button className="btn">Add Task</button>
         </form>
       </div>
     </div>
