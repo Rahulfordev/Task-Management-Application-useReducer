@@ -33,6 +33,7 @@ export const GlobalProvider = ({ children }) => {
     addTask,
     deleteTask,
   };
+
   return (
     <GlobalContext.Provider value={value}>{children}</GlobalContext.Provider>
   );

@@ -1,21 +1,20 @@
 import { useContext, useState } from "react";
 import { GlobalContext } from "../../Context/Globalstate";
 
-// import { IoAddOutline } from "react-icons/io5";
-
 import "./AddTask.css";
 const AddTaskForm = () => {
   const [task, setTask] = useState("");
-
   const { addTask } = useContext(GlobalContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(task);
+
     const taskItem = {
       id: Date.now(),
       task,
     };
+
     addTask(taskItem);
     setTask("");
   };
@@ -32,7 +31,6 @@ const AddTaskForm = () => {
                 onChange={(e) => setTask(e.target.value)}
                 placeholder="Enter your task..."
               />
-
               <button className="btn">+{/* <IoAddOutline /> */}</button>
             </div>
           </div>
