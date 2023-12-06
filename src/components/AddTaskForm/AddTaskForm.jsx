@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
-import { GlobalContext } from "../../Context/Globalstate";
+import { Context } from "../../Context/Context";
 
 import "./AddTask.css";
 const AddTaskForm = () => {
   const [task, setTask] = useState("");
-  const { addTask } = useContext(GlobalContext);
+  const { addTask } = useContext(Context);
 
   const handleSubmit = (e) => {
     e.preventDefault();

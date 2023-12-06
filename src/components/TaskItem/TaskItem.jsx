@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react";
-import { GlobalContext } from "../../Context/Globalstate";
+import { Context } from "../../Context/Context";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { GrEdit } from "react-icons/gr";
 
 import "./TaskItem.css";
 
 const TaskItem = ({ taskItem }) => {
-  const { completeTask, deleteTask } = useContext(GlobalContext);
+  const { completeTask, deleteTask } = useContext(Context);
   const { id, task, isComplete } = taskItem;
   // const [checked, setChecked] = useState(false);
   // console.log(checked);

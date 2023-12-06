@@ -8,7 +8,7 @@ const initialState = {
   tasks: [],
 };
 
-export const GlobalContext = createContext(initialState);
+export const Context = createContext(initialState);
 
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -54,7 +54,5 @@ export const GlobalProvider = ({ children }) => {
     completeTask,
   };
 
-  return (
-    <GlobalContext.Provider value={value}>{children}</GlobalContext.Provider>
-  );
+  return <Context.Provider value={value}>{children}</Context.Provider>;
 };

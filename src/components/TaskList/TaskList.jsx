@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { GlobalContext } from "../../Context/Globalstate";
+import { Context } from "../../Context/Context";
 import TaskItem from "../TaskItem/TaskItem";
 
 const TaskList = () => {
-  const { tasks } = useContext(GlobalContext);
+  const { tasks } = useContext(Context);
   return (
     <div>
       <div>
