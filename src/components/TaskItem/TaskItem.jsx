@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { GlobalContext } from "../../Context/Globalstate";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { GrEdit } from "react-icons/gr";
@@ -7,28 +7,21 @@ import { GrEdit } from "react-icons/gr";
 import "./TaskItem.css";
 
 const TaskItem = ({ taskItem }) => {
-  const { deleteTask } = useContext(GlobalContext);
-  const { id, task } = taskItem;
-  const [checked, setChecked] = useState(false);
-  console.log(checked);
+  const { completeTask, deleteTask } = useContext(GlobalContext);
+  const { id, task, isComplete } = taskItem;
+  // const [checked, setChecked] = useState(false);
+  // console.log(checked);
   return (
     <div>
       <div className="task__list">
         <div className="task__list--conent">
           <input
-            onChange={() => setChecked(!checked)}
-            className="checkbox"
+            checked={isComplete}
+            onChange={() => completeTask(id)}
             type="checkbox"
           />
-          {checked ? (
-            <i>
-              <del style={{ color: "red" }} className="task__li">
-                {task}
-              </del>
-            </i>
-          ) : (
-            <li className="task__li">{task}</li>
-          )}
+
+          <li className={`task__li ${isComplete && "complete"}`}>{task}</li>
         </div>
         <div className="task__list--button">
           <button className="task__edit">

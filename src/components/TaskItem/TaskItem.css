@@ -29,3 +29,7 @@
 .task__li {
   font-size: 20px;
 }
+
+.complete {
+  text-decoration: line-through;
+}
