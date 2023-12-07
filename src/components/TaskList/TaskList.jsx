@@ -6,13 +6,17 @@ const TaskList = () => {
   const { tasks } = useContext(Context);
   return (
     <div>
-      <div>
-        <ul>
-          {tasks.map((task) => (
-            <TaskItem key={task.id} taskItem={task} />
-          ))}
-        </ul>
-      </div>
+      {tasks.length > 0 ? (
+        <div>
+          <ul>
+            {tasks.map((task) => (
+              <TaskItem key={task.id} taskItem={task} />
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <h1>No task added yet</h1>
+      )}
     </div>
   );
 };
