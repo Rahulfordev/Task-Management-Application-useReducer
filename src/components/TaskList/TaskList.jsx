@@ -15,7 +15,7 @@ const TaskList = () => {
           </ul>
         </div>
       ) : (
-        <h1>No task added yet</h1>
+        <h2>No task added yet</h2>
       )}
     </div>
   );
