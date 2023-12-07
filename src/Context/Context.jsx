@@ -4,7 +4,7 @@ import { useReducer } from "react";
 import { reducer } from "../reducer/reducer";
 // import { getDataFormLocalstorage } from "../components/Utils/Utils";
 
-const initialState = {
+const initialState = JSON.parse(localStorage.getItem("data")) ?? {
   tasks: [],
 };
 
