@@ -28,10 +28,12 @@
 
 .task__li {
   font-size: 20px;
+  word-break: break-all;
+  max-width: 360px;
 }
 
 .complete {
   text-decoration: line-through;
   font-style: italic;
-  /* color: ;  */
+  color: red;
 }

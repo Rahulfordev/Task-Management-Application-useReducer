@@ -1,5 +1,5 @@
 import "./App.css";
-import { GlobalProvider } from "./Context/Context";
+import { GlobalProvider } from "./ContextProvider/ContextProvider";
 import AddTaskForm from "./components/AddTaskForm/AddTaskForm";
 import TaskList from "./components/TaskList/TaskList";
 function App() {

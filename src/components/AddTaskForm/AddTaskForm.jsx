@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Context } from "../../Context/Context";
+import { Context } from "../../ContextProvider/ContextProvider";
 
 import "./AddTask.css";
 const AddTaskForm = () => {
@@ -31,7 +31,7 @@ const AddTaskForm = () => {
                 onChange={(e) => setTask(e.target.value)}
                 placeholder="Enter your task..."
               />
-              <button className="btn">+{/* <IoAddOutline /> */}</button>
+              <button className="btn">+</button>
             </div>
           </div>
         </form>

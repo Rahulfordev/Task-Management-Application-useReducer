@@ -31,12 +31,12 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
-  function editTask(id) {
-    dispatch({
-      type: "EDIT__TASK",
-      payload: id,
-    });
-  }
+  // function editTask(id) {
+  //   dispatch({
+  //     type: "EDIT__TASK",
+  //     payload: id,
+  //   });
+  // }
 
   function completeTask(id) {
     dispatch({
@@ -50,7 +50,6 @@ export const GlobalProvider = ({ children }) => {
     tasks: state.tasks,
     addTask,
     deleteTask,
-    editTask,
     completeTask,
   };
 

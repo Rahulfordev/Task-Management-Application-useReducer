@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Context } from "../../Context/Context";
+import { Context } from "../../ContextProvider/ContextProvider";
 import TaskItem from "../TaskItem/TaskItem";
 
 const TaskList = () => {
