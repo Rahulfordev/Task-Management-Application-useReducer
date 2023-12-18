@@ -4,7 +4,7 @@ import { Context } from "../../ContextProvider/ContextProvider";
 import "./AddTask.css";
 const AddTaskForm = () => {
   const [task, setTask] = useState("");
-  const { addTask } = useContext(Context);
+  const { addTask,  } = useContext(Context);
 
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -10,7 +10,6 @@ import "./TaskItem.css";
 const TaskItem = ({ taskItem }) => {
   const [update, setUpdate] = useState("");
   const [isEdit, setIsEdit] = useState(false);
-
   const { tasks, completeTask, deleteTask } = useContext(Context);
   const { id, task, isComplete } = taskItem;
 
@@ -51,11 +50,16 @@ const TaskItem = ({ taskItem }) => {
             onClick={() => (isEdit ? addTask(id) : editTask(id))}
             className="task__edit"
           >
-            {isEdit ? <FaRegSave /> : <GrEdit />}
+            {isEdit ? <FaRegSave /> : isComplete ? null : <GrEdit />}
           </button>
-          <button className="task__delete" onClick={() => deleteTask(id)}>
-            <RiDeleteBin6Line />
-          </button>
+          {isEdit ? null : (
+            <button
+              className="task__delete"
+              onClick={isComplete ? () => deleteTask(id) : null}
+            >
+              <RiDeleteBin6Line />
+            </button>
+          )}
         </div>
       </div>
     </div>

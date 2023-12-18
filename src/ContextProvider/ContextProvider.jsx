@@ -31,13 +31,6 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
-  // function editTask(id) {
-  //   dispatch({
-  //     type: "EDIT__TASK",
-  //     payload: id,
-  //   });
-  // }
-
   function completeTask(id) {
     dispatch({
       type: "COMPLETE_TASK",
