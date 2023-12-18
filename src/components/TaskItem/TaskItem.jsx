@@ -22,9 +22,13 @@ const TaskItem = ({ taskItem }) => {
   };
 
   const addTask = (id) => {
-    const filterTask = tasks.find((tasks) => tasks.id === id);
-    setIsEdit(false);
-    filterTask.task = update;
+    if (update.trim() === "") {
+      return;
+    } else {
+      const filterTask = tasks.find((tasks) => tasks.id === id);
+      setIsEdit(false);
+      filterTask.task = update;
+    }
   };
 
   return (
