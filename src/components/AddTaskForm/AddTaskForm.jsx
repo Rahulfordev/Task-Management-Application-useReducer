@@ -8,15 +8,19 @@ const AddTaskForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(task);
 
-    const taskItem = {
-      id: Date.now(),
-      task,
-    };
+    if (task.trim() === "") {
+      alert("Please add a task.");
+      return;
+    } else {
+      const taskItem = {
+        id: Date.now(),
+        task,
+      };
 
-    addTask(taskItem);
-    setTask("");
+      addTask(taskItem);
+      setTask("");
+    }
   };
   return (
     <div className="task-section">
