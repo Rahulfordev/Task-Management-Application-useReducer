@@ -10,7 +10,8 @@ import "./TaskItem.css";
 const TaskItem = ({ taskItem }) => {
   const [update, setUpdate] = useState("");
   const [isEdit, setIsEdit] = useState(false);
-  const { tasks, completeTask, deleteTask } = useContext(Context);
+
+  const { tasks, completeTask, deleteTask, updateTask } = useContext(Context);
   const { id, task, isComplete } = taskItem;
 
   const editTask = (id) => {
@@ -24,9 +25,8 @@ const TaskItem = ({ taskItem }) => {
     if (update.trim() === "") {
       return;
     } else {
-      const filterTask = tasks.find((tasks) => tasks.id === id);
+      updateTask(id, update);
       setIsEdit(false);
-      filterTask.task = update;
     }
   };
 

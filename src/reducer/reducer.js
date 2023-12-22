@@ -22,6 +22,17 @@ export const reducer = (state, action) => {
         }),
       };
 
+    case "UPDATE_TASK":
+      return {
+        ...state,
+        tasks: [...state.tasks].map((task) => {
+          if (task.id === action.payload.id) {
+            return { ...task, task: action.payload.task };
+          }
+          return task;
+        }),
+      };
+
     default:
       return state;
   }

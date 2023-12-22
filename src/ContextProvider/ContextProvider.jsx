@@ -15,6 +15,7 @@ export const GlobalProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem("data", JSON.stringify(state));
+    console.log(state);
   }, [state]);
 
   function addTask(task) {
@@ -38,12 +39,19 @@ export const GlobalProvider = ({ children }) => {
       isComplete: false,
     });
   }
+  function updateTask(id, task) {
+    dispatch({
+      type: "UPDATE_TASK",
+      payload: { id, task },
+    });
+  }
 
   const value = {
     tasks: state.tasks,
     addTask,
     deleteTask,
     completeTask,
+    updateTask,
   };
 
   return <Context.Provider value={value}>{children}</Context.Provider>;
