@@ -1,36 +1,55 @@
-# Task Management Application with useReduce
+# Task Management App
 
-Build a task management application that allows users to add, delete, and mark tasks as completed. Utilize the useReducer hook to manage the application state in a centralized manner.
+A simple Task Management app built with React, useReducer, and context API.
 
 ## Features
 
-- Create Task
-- Add Task
-- Edit Task
-- Update Task
-- Delete Task
-- Store Task LocalStorage
+- Add tasks
+- Toggle between complete/incomplete tasks
+- Edit/update tasks
+- Delete tasks
 
-## Live Link
+## Getting Started
 
-https://task-management-application-react.vercel.app/
-## Installation
+### Prerequisites
 
-Install my-project with yarn
+- [Node.js](https://nodejs.org/) installed on your machine
 
-```bash
-  yarn Install
-  yarn dev
-```
+### Installation
 
-## Authors
+1. **Clone the repository:**
 
-- [@Rahulfordev](https://github.com/Rahulfordev)
+   ```bash
+   git clone https://github.com/Rahulfordev/Task-Management-Application-useReducer.git
 
-## Got feedback for us?
+2. **Change into the project directory:**
+   - ```bash
+     cd Task-Management-Application-useReducer
+     ```
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+3. **Install dependencies:**
+   - ```bash
+     npm install / yarn
+     ```
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+4. **Start the development server:**
+   - ```bash
+     npm run dev
+     ```
 
-Have fun building! 🚀
+   The app will be available at [http://localhost:5173/](http://localhost:5173/).
+
+## Usage
+
+1. Open the app in your web browser.
+2. Add tasks using the "Add Task" button.
+3. Toggle task status between complete and incomplete.
+4. Edit/update tasks using the "Edit" button.
+5. Delete tasks using the "Delete" button.
+6. Store Task LocalStorage
+
+## Technologies Used
+
+- React 
+- useReducer
+- Context API
